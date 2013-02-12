@@ -4,8 +4,6 @@ End Code
 
 <script src="~/Scripts/jquery-1.9.1.js" type="text/javascript"></script>
 <script src="~/Scripts/jquery.signalR-1.0.0-rc2.js" type="text/javascript"></script>
-<script src="~/Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="~/Scripts/jquery.signalR-1.0.0-rc2.min.js" type="text/javascript"></script>
 <script src="~/signalr/hubs" type="text/javascript"></script>
 
 <label for="userid" >Your chat id:</label><input type="text" name="userid" id="userid" /><br />
@@ -18,17 +16,15 @@ End Code
     $(function () {
         var myHub = $.connection.myHub;
 
+        myHub.client.Add = function (msg) {
+            alert("here");
+        };
+
         $.connection.hub.logging = true
         $.connection.hub.start().done(function () {
             alert("Now connected!"); console.log("AHHHH");
         })
         .fail(function () { alert("Could not Connect!"); });
-
-        $.extend(myHub.client, {
-            Add: function (msg) {
-                alert("here");
-            }
-        });
 
         $("#broadcast").click(function () {
             // Call the chat method on the server
