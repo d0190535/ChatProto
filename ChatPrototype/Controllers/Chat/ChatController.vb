@@ -20,8 +20,8 @@ Namespace ChatPrototype
     Public Class myHub
         Inherits Hub
 
-        Public Sub Send(ByVal message As String)
-            Clients.All.Add(message)
+        Public Sub Send(ByVal user As String, ByVal message As String)
+            Clients.All.Add(user, message)
         End Sub
 
     End Class
