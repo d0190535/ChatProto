@@ -13,8 +13,13 @@ DONE:
 TODO(in no particular order):
 
 -Autoscroll chat window when new message is received (while > than windows height)
+
 -Create DB schema and implement it for logging
+
 -Private messaging (capturing unique clients context id for send/request)
+
 -Conference(upper level of pm)
+
 -Capture connect/disconnect
+
 -Make it look pretty
