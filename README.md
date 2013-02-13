@@ -11,13 +11,14 @@ Currently under development .. for future use ...
 
 
 DONE:
+=========
 -Creating a working instant messaging chat system at its most basic level
 
 
 
 
 TODO(in no particular order):
-
+=========
 -Autoscroll chat window when new message is received (while > than windows height)
 
 -Create DB schema and implement it for logging
