@@ -6,8 +6,8 @@ End Code
 <script src="~/Scripts/jquery-1.9.1.js" type="text/javascript"></script>
 <script src="~/Scripts/jquery.signalR-1.0.0-rc2.js" type="text/javascript"></script>
 <script src="~/signalr/hubs" type="text/javascript"></script>
-<link rel="Stylesheet" type="text/css" href="../../Scripts/bootstrap.css" />
-<link rel="Stylesheet" type="text/css" href="../../Scripts/style.css" />
+<link rel="stylesheet" type="text/css" href="~/Scripts/style.css" />
+<link rel="Stylesheet" type="text/css" href="~/Scripts/bootstrap.css" />
 
 <label for="userid" >Your chat ID:</label><input type="text" name="userid" id="userid" /><br />
 <label for="message" >Your message:</label><input type="text" name="message" id="message" maxlength="100" />
