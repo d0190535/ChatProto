@@ -21,7 +21,7 @@ Namespace ChatPrototype
         Inherits Hub
 
         Public Sub Send(ByVal user As String, ByVal message As String)
-            Clients.All.Add(user, message)
+            Clients.All.sendMessage(user, message)
         End Sub
 
     End Class
