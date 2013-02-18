@@ -3,10 +3,7 @@ ChatProto
 
 Real time messaging using signalR
 
-This is just a prototype ... 
-
-Currently under development .. for future use ...
-
+Feel free to contribute...
 
 
 
@@ -17,10 +14,13 @@ DONE:
 -Autoscroll chat window when new message is received (while > than windows height)
 
 
+IN PROGRESS:
+=========
+-AntiXss encoder
+
 
 TODO(in no particular order):
 =========
-
 -Create DB schema and implement it for logging
 
 -Private messaging (capturing unique clients context id for send/request)
@@ -28,5 +28,7 @@ TODO(in no particular order):
 -Conference(upper level of pm)
 
 -Capture connect/disconnect
+
+-Add timestamp
 
 -Make it look pretty
