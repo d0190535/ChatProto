@@ -13,7 +13,7 @@ DONE:
 
 -Autoscroll chat window when new message is received (while > than windows height)
 
--AntiXss encoder **Basic html encoding is implemented**
+-AntiXss encoder **(Basic html encoding is implemented)**
 
 IN PROGRESS:
 =========
@@ -23,7 +23,7 @@ IN PROGRESS:
 TODO(in no particular order):
 =========
 
--Clickable URL **Reference: http://www.codinghorror.com/blog/2008/10/the-problem-with-urls.html**
+-Clickable URL **(Reference: http://www.codinghorror.com/blog/2008/10/the-problem-with-urls.html)**
 
 -Private messaging (capturing unique clients context id for send/request)
 
