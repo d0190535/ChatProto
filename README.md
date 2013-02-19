@@ -13,15 +13,17 @@ DONE:
 
 -Autoscroll chat window when new message is received (while > than windows height)
 
+-AntiXss encoder **Basic html encoding is implemented**
 
 IN PROGRESS:
 =========
--AntiXss encoder
 
+-Create DB schema and implement it for logging
 
 TODO(in no particular order):
 =========
--Create DB schema and implement it for logging
+
+-Clickable URL **Reference: http://www.codinghorror.com/blog/2008/10/the-problem-with-urls.html**
 
 -Private messaging (capturing unique clients context id for send/request)
 
