@@ -18,17 +18,23 @@ End Code
 <script type="text/javascript">
     $(function () {
         var myHub = $.connection.myHub;
+        var window = $("#chatWindow");
 
-        myHub.client.sendMessage = function (user, msg) {
+        myHub.client.welcome = function () {
+            window.html(window.html() + "<i><font color=grey>Welcome to uChatt ~~</font></i><br/>");
+            window.scrollTop(window[0].scrollHeight);
+        };
+
+        myHub.client.sendMessage = function (user, message) {
             var window = $("#chatWindow");
-            window.html(window.html() + "<b><font color=blue>" + user + "</b></font>: " + msg + "<br />");
+            window.html(window.html() + "<b><font color=blue>" + user + "</b></font>: " + message + "<br/>");
             window.scrollTop(window[0].scrollHeight);
         };
 
         // enable console logging for hub
         $.connection.hub.logging = true
         $.connection.hub.start().done(function () {
-            alert("You are now connected and ready to chat!");
+            myHub.server.sendwelcome();
         })
         .fail(function () {
             alert("Could not Connect!");

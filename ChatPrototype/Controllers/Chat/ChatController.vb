@@ -20,8 +20,13 @@ Namespace ChatPrototype
     Public Class myHub
         Inherits Hub
 
+        Public Sub Sendwelcome()
+            Clients.All.welcome()
+        End Sub
+
         Public Sub Send(ByVal user As String, ByVal message As String)
-            Clients.All.sendMessage(user, message)
+            Dim text As String = HttpUtility.HtmlEncode(message)
+            Clients.All.sendMessage(user, text)
         End Sub
 
     End Class

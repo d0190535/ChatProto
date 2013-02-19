@@ -162,7 +162,6 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Test\TestController.vb" />
     <Compile Include="Controllers\Chat\ChatController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,9 +203,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Chat\Index.vbhtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Test\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
