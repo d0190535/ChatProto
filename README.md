@@ -11,9 +11,11 @@ DONE:
 =========
 -Creating a working instant messaging chat system at its most basic level
 
--Autoscroll chat window when new message is received (while > than windows height)
+-Autoscroll chat window when new message is received **(while > than windows height)**
 
 -AntiXss encoder **(basic html encoding is implemented)**
+
+-Add timestamp
 
 IN PROGRESS:
 =========
@@ -25,12 +27,10 @@ TODO(in no particular order):
 
 -Clickable URL **(reference: http://www.codinghorror.com/blog/2008/10/the-problem-with-urls.html)**
 
--Private messaging (capturing unique clients context id for send/request)
+-Private messaging **(capturing unique clients context id for send/request)**
 
 -Conference(upper level of pm)
 
 -Capture connect/disconnect
-
--Add timestamp
 
 -Make it look pretty
