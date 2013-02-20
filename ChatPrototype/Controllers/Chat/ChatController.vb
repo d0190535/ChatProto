@@ -25,8 +25,7 @@ Namespace ChatPrototype
         End Sub
 
         Public Sub Send(ByVal user As String, ByVal message As String)
-            Dim text As String = HttpUtility.HtmlEncode(message)
-            Clients.All.sendMessage(user, text)
+            Clients.All.sendMessage(HttpUtility.HtmlEncode(user), HttpUtility.HtmlEncode(message))
         End Sub
 
     End Class

@@ -26,8 +26,8 @@ End Code
         };
 
         myHub.client.sendMessage = function (user, message) {
-            var window = $("#chatWindow");
-            window.html(window.html() + "<b><font color=blue>" + user + "</b></font>: " + message + "<br/>");
+            var currTime = new Date();
+            window.html(window.html() + "<font color=grey>[" + currTime.getHours() + ":" + currTime.getMinutes() + "]</font>" + "<b><font color=blue>" + user + "</b></font>: " + message + "<br/>");
             window.scrollTop(window[0].scrollHeight);
         };
 
