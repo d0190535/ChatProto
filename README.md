@@ -15,6 +15,8 @@ DONE:
 
 -AntiXss encoder **(basic html encoding is implemented)**
 
+-Capture connect/disconnect
+
 -Add timestamp
 
 IN PROGRESS:
@@ -29,8 +31,6 @@ TODO(in no particular order):
 
 -Private messaging **(capturing unique clients context id for send/request)**
 
--Conference(upper level of pm)
-
--Capture connect/disconnect
+-Conference(upper level of pm / add connection to existing hub)
 
 -Make it look pretty
