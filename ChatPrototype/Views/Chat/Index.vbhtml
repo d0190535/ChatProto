@@ -31,6 +31,18 @@ End Code
             window.scrollTop(window[0].scrollHeight);
         };
 
+        myHub.client.joined = function (user) {
+            var currTime = new Date();
+            window.html(window.html() + "<i><font color=green>"+user+" has joined the chat</font></i><br/>");
+            window.scrollTop(window[0].scrollHeight);
+        };
+
+        myHub.client.leave = function (user) {
+            var currTime = new Date();
+            window.html(window.html() + "<i><font color=red>" + user + " has left the chat</font></i><br/>");
+            window.scrollTop(window[0].scrollHeight);
+        };
+
         // enable console logging for hub
         $.connection.hub.logging = true
         $.connection.hub.start().done(function () {

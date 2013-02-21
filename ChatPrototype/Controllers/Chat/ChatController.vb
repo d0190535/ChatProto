@@ -20,8 +20,16 @@ Namespace ChatPrototype
     Public Class myHub
         Inherits Hub
 
+        Public Overrides Function OnConnected() As Threading.Tasks.Task
+            Return Clients.All.joined(Context.ConnectionId)
+        End Function
+
+        Public Overrides Function OnDisconnected() As Threading.Tasks.Task
+            Return Clients.All.leave(Context.ConnectionId)
+        End Function
+
         Public Sub Sendwelcome()
-            Clients.All.welcome()
+            Clients.Caller.welcome()
         End Sub
 
         Public Sub Send(ByVal user As String, ByVal message As String)
