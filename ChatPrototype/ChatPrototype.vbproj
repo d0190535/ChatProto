@@ -175,6 +175,7 @@
     <Content Include="App_Start\RegisterHubs.cs" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.css" />
+    <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-1.9.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
