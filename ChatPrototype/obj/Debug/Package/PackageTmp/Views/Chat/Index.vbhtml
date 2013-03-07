@@ -37,7 +37,7 @@ End Code
 <script type="text/javascript">
     $(function () {
 
-        var msg = "<font color=blue>TEST</font>";
+        var msg = "test";
 
         $("#chaticon").popover({ html: true, placement: 'above',
             content: function () {
@@ -49,23 +49,25 @@ End Code
         var window = $("#chatWindow");
         var currTime = new Date();
 
+        setInterval(function () { myHub.server.updateusers() }, 1000);
+
+        myHub.client.getUsers = function (usersList) {
+            msg = usersList
+        };
+
         myHub.client.welcome = function () {
             window.html(window.html() + "<i><font color=grey>Welcome to uChatt ~~</font></i><br/>");
             window.scrollTop(window[0].scrollHeight);
         };
 
         myHub.client.sendMessage = function (user, message) {
-
             window.html(window.html() + "<font color=grey>[" + currTime.getHours() + ":" + currTime.getMinutes() + "]</font>" + "<b><font color=blue>" + user + "</b></font>: " + message + "<br/>");
             window.scrollTop(window[0].scrollHeight);
         };
 
         myHub.client.joined = function (user) {
-
             window.html(window.html() + "<i><font color=green>" + user + " has joined the chat</font></i><br/>");
             window.scrollTop(window[0].scrollHeight);
-
-            msg = "<font color=blue>:)</font>"
         };
 
         myHub.client.leave = function (user) {
