@@ -16,6 +16,7 @@ End Code
 <input type="button" id="broadcast" value="Send" />
 <div id="chatWindow" style="width: 100%; height: 300px; overflow: scroll; border: 1px solid grey"></div>
 
+<!--
 <div class="dropup">
     <button class="btn btn-success primary dropdown-toggle" data-toggle="dropdown">
         ignore don't click <span class="caret"></span>
@@ -27,8 +28,16 @@ End Code
     </ul>
 </div>
 
+
+        $("#chaticon").popover({ html: true, placement: 'above',
+            content: function () {
+                return msg;
+            }
+        });
+-->
+
 <div class="uchatt">
-    <button class="btn btn-success btn-chat" id="chaticon" data-original-title="Users Online">
+    <button class="btn btn-success btn-chat" id="chaticon" data-original-title="Users Online" data-content="test">
             Chat
     </button>
 </div>
@@ -37,22 +46,18 @@ End Code
 <script type="text/javascript">
     $(function () {
 
-        var msg = "test";
-
-        $("#chaticon").popover({ html: true, placement: 'above',
-            content: function () {
-                return msg;
-            }
-        });
-
+        var chatIcon = $("#chaticon");
         var myHub = $.connection.myHub;
         var window = $("#chatWindow");
         var currTime = new Date();
 
+        $("#chaticon").popover({ html: true, placement: 'above' });
+
         setInterval(function () { myHub.server.updateusers() }, 1000);
 
         myHub.client.getUsers = function (usersList) {
-            msg = usersList
+            chatIcon.data('popover').tip().html(usersList);
+
         };
 
         myHub.client.welcome = function () {

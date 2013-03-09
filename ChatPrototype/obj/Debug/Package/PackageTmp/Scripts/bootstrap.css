@@ -4445,7 +4445,9 @@ a.thumbnail:hover {
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
-.popover-content {
+.popover-content 
+{
+    margin-top:-50px;
   padding: 9px 14px;
 }
 .popover .arrow,
